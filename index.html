@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>'Document'</title>
+    <link rel="stylesheet" href="./style.css" />
+
+    <!-- Link's font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- End - Link's Fontes -->
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="avatar">
+          <span>
+            <img src="./images/build.svg" alt="Selo RocketSeat" />
+          </span>
+          <img
+            src="https://lorempixel.com/185/185/people/"
+            alt="Foto pessoal"
+          />
+        </div>
+        <h1 id="userName">Lucas Henrique</h1>
+        <a href="#">
+          <img src="./images/github.svg" alt="icone github" /> lucashr10</a
+        >
+
+        <p>An instructor focused on helping pople start programming for web</p>
+
+        <ul id="socialLinks">
+          <li class="youtube">
+            <a href="#" target="_blank"
+              ><img src="./images/youtube.svg" alt="Icone Youbetube"
+            /></a>
+          </li>
+          <li class="instagram">
+            <a href="#"
+              ><img src="./images/instagran.svg" alt="Icone Instagram"
+            /></a>
+          </li>
+          <li class="facebook">
+            <a href="#"
+              ><img src="./images/facebook.svg" alt="Icone Facebook"
+            /></a>
+          </li>
+          <li class="twitter">
+            <a href="#"
+              ><img src="./images/twitter.svg" alt="Icone Twitter"
+            /></a>
+          </li>
+        </ul>
+      </div>
+    </main>
+
+    <script>
+      const LinksSocialMedia = {
+        github: 'hr-lucas',
+        youtube: 'no-have',
+        facebook: 'maykbrito',
+        instagram: '_lucashr10',
+        twitter: 'no-have'
+      }
+
+      function changeSocialMediaLinks() {
+        for (let li of socialLinks.children) {
+          const social = li.getAttribute('class')
+          li.children[0].href = `https://${social}.com/${LinksSocialMedia[social]}`
+          // alert(li.children[0].href)
+        }
+      }
+
+      changeSocialMediaLinks()
+    </script>
+  </body>
+</html>
